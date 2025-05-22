@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Free Revolution | Emotional Mastery</title>
+    <style>
+        :root {
+            --sage: #B6CFC2;
+            --sand: #F4ECE1;
+            --dusty-rose: #D9A5B3;
+            --dark-sage: #96B3A3;
+            --dark-text: #333333;
+            --light-text: #666666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: #FFFFFF;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+        }
+        
+       /* Logo container */
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 600;
+            color: var(--dark-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            
+            position: flex; /* Use flexbox for alignment */
+            top: 10px; /* Position from the top */
+            left: 10px; /* Position from the left */
+            z-index: 1000; /* Ensure it's above other content */
+            padding: 5px; /* Optional: Adjust padding around the logo */
+            background-color: white; /* Optional: Add background if needed */
+            }
+
+            /* Logo image size */
+        .logo img {
+            height: 90px; /* Adjust to desired size */
+            width: 150px; /* Keep it square by maintaining the aspect ratio */
+            margin-right: 10px;
+}
+
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        .main-nav ul li {
+            margin-left: 30px;
+        }
+        
+        .main-nav ul li a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .main-nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--dusty-rose);
+            transition: width 0.3s ease;
+        }
+        
+        .main-nav ul li a:hover {
+            color: var(--dusty-rose);
+        }
+        
+        .main-nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: var(--dark-text);
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-toggle:hover {
+            color: var(--dusty-rose);
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            right: -300px;
+            width: 300px;
+            height: calc(100vh - 80px);
+            background-color: #FFFFFF;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            padding: 30px;
+            z-index: 999;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+        }
+        
+        .mobile-menu ul li {
+            margin-bottom: 20px;
+        }
+        
+        .mobile-menu ul li a {
+            color: var(--dark-text);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 10px 0;
+        }
+        
+        .mobile-menu ul li a:hover {
+            color: var(--dusty-rose);
+            padding-left: 10px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 80px;
+            background-color: var(--sand);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .hero-text {
+            padding: 50px 0;
+        }
+        
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+            line-height: 1.2;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--light-text);
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--dusty-rose);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #C4889A;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(217, 165, 179, 0.3);
+        }
+        
+        .hero-video {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        
+        .hero-video img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            background-color: var(--dusty-rose);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .play-button::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid var(--dusty-rose);
+            margin-left: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover::after {
+            border-left-color: white;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--sage);
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .service-box {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid rgba(182, 207, 194, 0.3);
+        }
+        
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--sage);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+            color: white;
+        }
+        
+        .service-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: var(--dark-text);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--light-text);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--sage);
+        }
+        
+        .testimonial-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-slide {
+            text-align: center;
+            padding: 30px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin: 20px;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.5s ease;
+        }
+        
+        .testimonial-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .testimonial-content {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: var(--dark-text);
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-details h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--dark-text);
+        }
+        
+        .author-details p {
+            font-size: 14px;
+            color: var(--light-text);
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .testimonial-nav button {
+            background: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-nav button:hover {
+            background-color: var(--dusty-rose);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Programs Section */
+        .programs {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .program-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .program-card {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(182, 207, 194, 0.3);
+            position: relative;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--sage);
+        }
+        
+        .program-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .program-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .program-card:hover .program-image img {
+            transform: scale(1.1);
+        }
+        
+        .program-content {
+            padding: 30px;
+        }
+        
+        .program-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        
+        .program-content p {
+            color: var(--light-text);
+            margin-bottom: 20px;
+        }
+        
+        .program-card .btn {
+            width: 100%;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 100px 0;
+            background-color: var(--sand);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 30px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: var(--light-text);
+        }
+        
+        .blog-meta span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-meta span i {
+            margin-right: 5px;
+        }
+        
+        .blog-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+        }
+        
+        .blog-content p {
+            color: var(--light-text);
+            margin-bottom: 20px;
+        }
+        
+        .blog-link {
+            color: var(--dusty-rose);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-link:hover {
+            color: #C4889A;
+        }
+        
+        .blog-link span {
+            margin-left: 5px;
+            transition: margin-left 0.3s ease;
+        }
+        
+        .blog-link:hover span {
+            margin-left: 10px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background-color: var(--dusty-rose);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        .btn-light {
+            background-color: white;
+            color: var(--dusty-rose);
+        }
+        
+        .btn-light:hover {
+            background-color: var(--sand);
+            color: var(--dusty-rose);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-text);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--sage);
+        }
+        
+        .footer-column p {
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links li a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links li a:hover {
+            opacity: 1;
+            color: var(--sage);
+            padding-left: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--sage);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+        
+        /* Utility Classes */
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .hero-content,
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .hero-video,
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+            
+            .mobile-nav-toggle {
+                display: block;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+            
+            .about-text h3 {
+                font-size: 28px;
+            }
+            
+            .cta h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+   <header>
+  <div class="container header-container">
+    <a href="#home" class="logo">
+      <img src="Anxiety Free.png" alt="Anxiety Free Revolution Logo" />
+      
+    </a>
+    
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+
+    <button class="mobile-nav-toggle">☰</button>
+  </div>
+</header>
+
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>It's time to feel safe in your own mind again.</h1>
+                    <p>Discover proven techniques and compassionate guidance to transform your relationship with anxiety and reclaim your emotional freedom.</p>
+                    <a href="#programs" class="btn">Take the First Step</a>
+                </div>
+               <div class="hero-video">
+    <video src="woman_at_the_top.mp4" preload="metadata"></video>
+    <div class="play-button"></div>
+</div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+                <p>Dedicated to empowering you with effective tools for managing anxiety and building emotional resilience</p>
+            </div>
+            
+            <div class="services">
+                <div class="service-box">
+                    <div class="service-icon"></div>
+                    <h3>Person 1</h3>
+                    <p>Person One believes a lot in smething and because of that belief she chose to do something about it and that led her to meeting other people who believe what she believes</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon"></div>
+                    <h3>Person 2</h3>
+                    <p>Person Two Loves life and life loves him two and he decided to share his love for life with everyone making everyone around him feel alife</p>
+                </div>
+                <div class="service-box">
+                    <div class="service-icon"></div>
+                    <h3>Person 3</h3>
+                    <p>Person 3 Loves person 1 & 2 believes in them and believes in their dreams and Goals so she is always here for them</p>
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who We Are</h3>
+                    <p>At Anxiety Free Revolution, we understand the challenges of living with anxiety because we've been there. Our approach combines evidence-based techniques with compassionate support to help you transform your relationship with anxiety.</p>
+                    <p>Founded by experienced mental health professionals, our programs have helped thousands of people move from constant worry to emotional freedom and resilience.</p>
+                    <p>We believe that everyone deserves to feel calm, confident, and in control of their thoughts and emotions. Our mission is to provide accessible, practical strategies that make that possible.</p>
+                    <a href="#contact" class="btn">Connect With Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="/api/placeholder/600/400" alt="Our team">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Hear from people who have transformed their relationship with anxiety</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        "After years of struggling with debilitating anxiety, the techniques I learned through Anxiety Free Revolution have completely transformed my life. I now have practical tools to manage anxious thoughts before they spiral, and for the first time in decades, I feel a genuine sense of peace and confidence."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Sarah M.">
+                        <div class="author-details">
+                            <h4>Sarah M.</h4>
+                            <p>Program Graduate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        "The emotional mastery program helped me understand the root causes of my anxiety and gave me practical strategies to overcome it. I'm now living with a sense of freedom I never thought possible. The breathing techniques alone have been life-changing for my panic attacks."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Michael T.">
+                        <div class="author-details">
+                            <h4>Michael T.</h4>
+                            <p>Anxiety Free for 1 Year</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        "The compassionate guidance combined with practical exercises made all the difference for me. I've tried many approaches to managing my anxiety, but this is the first one that provided tools I could actually use in my daily life. I'm so grateful for this program."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Emma R.">
+                        <div class="author-details">
+                            <h4>Emma R.</h4>
+                            <p>Recent Program Graduate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav">
+                <button class="prev-testimonial">←</button>
+                <button class="next-testimonial">→</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Programs</h2>
+                <p>Structured pathways to help you overcome anxiety and build emotional resilience</p>
+            </div>
+            
+            <div class="program-cards">
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="angelina-sarycheva-wD1J9DD7fSk-unsplash.jpg" alt="Anxiety Reset Program">
+                    </div>
+                    <div class="program-content">
+                        <h3>Anxiety Reset Program</h3>
+                        <p>A 6-week guided journey to understanding and transforming your relationship with anxiety using proven cognitive techniques and mindfulness practices.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="andrea-boschini-Dm8oSsCLNOc-unsplash.jpg" alt="Emotional Mastery Workshop">
+                    </div>
+                    <div class="program-content">
+                        <h3>Emotional Mastery Workshop</h3>
+                        <p>An intensive weekend experience that equips you with practical tools to regulate emotions, manage stress, and build lasting resilience.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-image">
+                        <img src="antonika-chanel-zTgFtM6M9Gs-unsplash.jpg" alt="One-on-One Coaching">
+                    </div>
+                    <div class="program-content">
+                        <h3>One-on-One Coaching</h3>
+                        <p>Personalized guidance and support tailored to your specific anxiety challenges, helping you create a customized path to emotional freedom.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Articles</h2>
+                <p>Insights, strategies and inspiration for your anxiety-free journey</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="maxim-berg-vLfzJSGCU9c-unsplash.jpg" alt="The Science of Anxiety">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 12, 2025</span>
+                            <span>Mental Health</span>
+                        </div>
+                        <h3>The Science of Anxiety: Understanding Your Brain's Alarm System</h3>
+                        <p>Learn how anxiety works in your brain and why understanding this mechanism is the first step to transforming your relationship with it.</p>
+                        <a href="#" class="blog-link">Read More <span>→</span></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="meditation.jpg" alt="5 Minute Breathing Exercise">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 5, 2025</span>
+                            <span>Self-Care</span>
+                        </div>
+                        <h3>5-Minute Breathing Exercise That Can Stop Anxiety in Its Tracks</h3>
+                        <p>A simple yet powerful breathing technique that you can use anywhere to quickly calm your nervous system during moments of anxiety.</p>
+                        <a href="#" class="blog-link">Read More <span>→</span></a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="stop anxiety.jpg" alt="Breaking the Worry Cycle">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>April 28, 2025</span>
+                            <span>Cognitive Tools</span>
+                        </div>
+                        <h3>Breaking the Worry Cycle: How to Stop Anxious Thoughts</h3>
+                        <p>Practical cognitive strategies to interrupt repetitive worry patterns and redirect your mind toward more constructive thinking.</p>
+                        <a href="#" class="blog-link">Read More <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Reclaim Your Peace of Mind?</h2>
+            <p>Join thousands who have transformed their relationship with anxiety and discovered lasting emotional freedom.</p>
+            <a href="#programs" class="btn btn-light">Take the First Step</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Anxiety Free Revolution</h3>
+                    <p>Empowering you with tools and resources for emotional mastery and freedom from anxiety.</p>
+                    <div class="social-links">
+                        <a href="#"><span>f</span></a>
+                        <a href="#"><span>t</span></a>
+                        <a href="#"><span>in</span></a>
+                        <a href="#"><span>ig</span></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#programs">Programs</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#login">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li>Email: warriors@anxietyfreerevolution.com</li>
+                        <li>Phone: +27 82 822 4060</li>
+                        <li>Address: 123 Johannesburg Lane, Gauteng , 12345</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for helpful tips, resources, and updates on managing anxiety.</p>
+                    <form action="#" method="post">
+                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: none;">
+                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anxiety Free Revolution. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenuToggle.addEventListener('click', function () {
+        mobileMenu.classList.toggle('active');
+        mobileMenuToggle.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Testimonial Slider
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const prevButton = document.querySelector('.prev-testimonial');
+    const nextButton = document.querySelector('.next-testimonial');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        testimonialSlides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+
+        testimonialSlides[index].classList.add('active');
+    }
+
+    if (prevButton && nextButton) {
+        prevButton.addEventListener('click', function () {
+            currentSlide = (currentSlide - 1 + testimonialSlides.length) % testimonialSlides.length;
+            showSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', function () {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(currentSlide);
+        });
+
+        // Auto-rotate testimonials
+        setInterval(function () {
+            currentSlide = (currentSlide + 1) % testimonialSlides.length;
+            showSlide(currentSlide);
+        }, 5000);
+    }
+
+    // Hero Video Play Button Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.querySelector('.hero-video video');
+        const playBtn = document.querySelector('.play-button');
+
+        if (video && playBtn) {
+            playBtn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playBtn.style.display = 'none'; // Hide play button
+                } else {
+                    video.pause();
+                    playBtn.style.display = 'flex';
+                }
+            });
+        }
+    });
+
+    // Sticky Header
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        header.classList.toggle('sticky', window.scrollY > 0);
+    });
+</script>
+</body>
+</html>
